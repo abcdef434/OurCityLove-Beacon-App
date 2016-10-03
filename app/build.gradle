@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.github.dcendents.android-maven' // for jitpack
-group 'org.bitbucket.vegetable_Liao'
+group 'com.github.Vegetable'
 
 android {
     compileSdkVersion 24
