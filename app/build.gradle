@@ -1,7 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.github.dcendents.android-maven' // for jitpack
-group 'com.github.Vegetable'
+group 'com.github.abcdef434'
 
 android {
     compileSdkVersion 24
@@ -31,5 +31,5 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
-    compile 'com.github.jitpack:gradle-simple:1.0'
+//    compile 'com.github.jitpack:gradle-simple:1.0'
 }
