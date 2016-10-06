@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">OurCityLove-Beacon-App</string>
+
+    <string name="permission_action_default" translatable="false">使用此項功能</string>
+    <string name="permission_action_location" translatable="false">為您進行定位</string>
+
+    <string name="permission_contacts" translatable="false">聯絡人</string>
+    <string name="permission_microphone" translatable="false">麥克風</string>
+    <string name="permission_phone" translatable="false">電話</string>
+    <string name="permission_sensors" translatable="false">身體感應器</string>
+    <string name="permission_sms" translatable="false">簡訊</string>
+    <string name="permission_calendar" translatable="false">日曆</string>
+    <string name="permission_storage" translatable="false">儲存</string>
+    <string name="permission_location" translatable="false">位置</string>
+
+    <string name="permission_rationale_title" translatable="false">權限「%s」未啟用</string>
+    <string name="permission_rationale_default_msg" translatable="false">我們需要此權限以便%s，建議您啟用此權限</string>
+
+    <string name="unit_kilometer" translatable="false">公里</string>
+    <string name="unit_meter" translatable="false">公尺</string>
 </resources>

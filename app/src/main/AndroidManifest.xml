@@ -1,5 +1,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="ourcitylove.org.ourcitylove_beacon_app">
+
+    <!-- Custom permissions -->
+    <uses-permission android:name="android.permission.FROM_BEACON_APP" />
+    <uses-permission android:name="android.permission.GET_ALL_TYPE_BEACONS" />
+    <!--normal-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!--dangerous-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
 
     <application
         android:allowBackup="true"
@@ -7,6 +23,17 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <meta-data android:name="io.fabric.ApiKey" android:value="985feebaa8297486de6a4d08c814fac265110e11"/>
+        <meta-data tools:replace="android:value" android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+
+        <receiver
+            android:name="ourcitylove.org.ourcitylove_beacon_app.hinet.HinetManager$PositionBeaconReceiver"
+            android:permission="com.cht.beacon.notify.App.permission.GET_ALL_TYPE_BEACONS">
+            <intent-filter>
+                <action android:name="receiver_position_beacon" />
+            </intent-filter>
+        </receiver>
 
     </application>
 

@@ -1,15 +1,16 @@
 apply plugin: 'com.android.library'
 apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'io.fabric'
 apply plugin: 'com.github.dcendents.android-maven' // for jitpack
-group 'com.github.Vegetable'
+group 'com.github.abcdef434'
 
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.3"
     defaultConfig {
+        manifestPlaceholders = [ LibApplicationId:""]
         minSdkVersion 19
         targetSdkVersion 24
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -30,6 +31,21 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.google.firebase:firebase-core:9.4.0'   // analytics
     testCompile 'junit:junit:4.12'
-//    compile 'com.github.jitpack:gradle-simple:1.0'
+    compile 'com.google.code.gson:gson:2.7' //json
+    compile 'org.greenrobot:eventbus:3.0.0' //eventbus
+    compile 'com.karumi:dexter:2.3.1' //Permission Require
+
+    //引入RxAndroid----begin
+    compile 'io.reactivex:rxandroid:1.2.1' // rx
+    compile 'io.reactivex:rxjava:1.1.8' // rx
+    //RxAndroid----End
+
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'io.nlopez.smartlocation:library:3.2.7'
+
+
+//    compile project(':iii-beacon-sdk')
+    compile project(':BeaconNotifyLite')
 }
